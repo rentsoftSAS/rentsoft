@@ -8,12 +8,13 @@ cliente.Apellido,
 cliente.Direccion,
 cliente.Correo,
 cliente.idTipoDocumento,
-tipodocumento.tipodocumento,
-tipodocumento.descripcion
+	tipodocumento.tipodocumento,
+	tipodocumento.descripcion
 from
 cliente
 inner join
 tipodocumento on cliente .idTipodocumento =tipodocumento.id
+where cliente.activo=1
 
 
 

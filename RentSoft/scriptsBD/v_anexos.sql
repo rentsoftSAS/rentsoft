@@ -5,4 +5,5 @@ id,
 tabla,
 Ruta,
 IdRegistro
- from anexos
+from anexos
+where activo=1
