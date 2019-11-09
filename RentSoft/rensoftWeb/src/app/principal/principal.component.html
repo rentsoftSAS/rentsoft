@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">RENTSOFT</a>
 
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#" onclick='contraer(event);'>
       <i class="fas fa-bars"></i>
     </button>
 
@@ -61,30 +61,44 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <i class="fas fa-fw fa-dolly-flatbed"></i>
+          <span >Alquiler</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Login Screens:</h6>
-          <a class="dropdown-item" href="login.html">Login</a>
-          <a class="dropdown-item" href="register.html">Register</a>
-          <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-          <div class="dropdown-divider"></div>
-          <h6 class="dropdown-header">Other Pages:</h6>
-          <a class="dropdown-item" href="404.html">404 Page</a>
-          <a class="dropdown-item" href="blank.html">Blank Page</a>
+            <a class="dropdown-item"><i class="fas fa-fw fa-search"></i>Consultar</a>
+          <a class="dropdown-item" > <i class="fas fa-fw fa-dollar-sign"></i>Cotizar</a>
+          <a class="dropdown-item"><i class="fas fa-fw fa-dolly"></i>Despachar</a>
+          <a class="dropdown-item"><i class="fas fa-fw fa-truck-loading"></i>Devolver</a>
+          <a class="dropdown-item"><i class="fas fa-fw fa-money-check-alt"></i>Liquidar</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]='"home"'>
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Estadistica</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"[routerLink]='"elementos"'>
-          <i class="fas fa-fw fa-table"></i>
-          <span>Elementos</span></a>
-      </li>
+
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-users"></i>
+            <span >Clientes</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item"><i class="fas fa-fw fa-search"></i>Consultar</a>
+            <a class="dropdown-item" > <i class="fas fa-fw fa-building"></i>Sucursales</a>
+            <a class="dropdown-item" > <i class="fas fa-fw fa-user-tie"></i>Contactos</a>            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-fw fa-cubes"></i>
+              <span >Inventario</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+              <a class="dropdown-item"><i class="fas fa-fw fa-barcode"></i>Elementos con serial</a>
+              <a class="dropdown-item"><i class="fas fa-fw fa-tools"></i>Elementos sin serial</a>
+              <a class="dropdown-item" > <i class="fas fa-fw fa-hospital-alt"></i>Bodegas</a>
+              <a class="dropdown-item" > <i class="fas fa-fw fa-chalkboard-teacher"></i>Administraci&oacute;n</a>     
+              <a class="dropdown-item"><i class="fas fa-fw fa-home"></i>Sedes</a>       
+            </div>
+          </li>
+   
     </ul>
     <div id="content-wrapper">
       <div class="container-fluid">

@@ -1,3 +1,11 @@
+
+  function contraer(e){
+    e.preventDefault();
+    $("body").toggleClass("sidebar-toggled");
+    $(".sidebar").toggleClass("toggled");
+
+  }
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -7,6 +15,7 @@
     $("body").toggleClass("sidebar-toggled");
     $(".sidebar").toggleClass("toggled");
   });
+
 
   // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
   $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
