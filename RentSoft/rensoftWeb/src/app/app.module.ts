@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {UsuarioService} from './usuario.service';
+import {UsuarioService} from './servicios/usuario.service';
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component'
 
