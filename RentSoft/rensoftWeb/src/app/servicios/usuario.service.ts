@@ -11,7 +11,8 @@ export class UsuarioService {
 
   GetUsuario(usuario,password){
    let usuariojson: string =  '{"usuario":"'+ usuario +'", "clave":"'+ password +'"}' 
-   return this.http.post<usuario[]>( environment.urlServicio +"/usuario",usuariojson)
+   return this.http.post<usuario[]>( environment.urlServicio +"/usuarios",usuariojson)
   }
 
 }
+

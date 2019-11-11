@@ -14,5 +14,11 @@ def usuarios():
     objeto = Usuario.ObtenerUsuario(usuario,clave)
     return   objeto
   
+
+@app.route("/alquileres",methods = ['POST'])
+def alquileres():
+    filtro = credenciales["filtro"]
+
+
 if __name__ == "__main__":
  app.run(debug=True)

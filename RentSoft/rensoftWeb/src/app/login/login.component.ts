@@ -10,7 +10,7 @@ export class LoginComponent{
  constructor (private usuario: UsuarioService, private router: Router){
  
  }
-
+  mensaje: string =""
   Ingresar(tbxusuario,tbxpassword,dvvalidaUsuario){  
   
    this.usuario.GetUsuario(tbxusuario.value,tbxpassword.value).subscribe(data =>{
