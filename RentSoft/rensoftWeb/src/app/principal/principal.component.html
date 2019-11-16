@@ -79,9 +79,9 @@
             <span >Clientes</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item"><i class="fas fa-fw fa-search"></i>Consultar</a>
-            <a class="dropdown-item" > <i class="fas fa-fw fa-building"></i>Sucursales</a>
-            <a class="dropdown-item" > <i class="fas fa-fw fa-user-tie"></i>Contactos</a>            
+            <a class="dropdown-item" [routerLink]='"CCliente"'><i class="fas fa-fw fa-search"></i>Consultar</a>
+            <a class="dropdown-item" [routerLink]='"Sucursales"' > <i class="fas fa-fw fa-building"></i>Sucursales</a>
+            <a class="dropdown-item" [routerLink]='"Contactos"'> <i class="fas fa-fw fa-user-tie"></i>Contactos</a>            
           </div>
         </li>
 
@@ -91,11 +91,11 @@
               <span >Inventario</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-              <a class="dropdown-item"><i class="fas fa-fw fa-barcode"></i>Elementos con serial</a>
-              <a class="dropdown-item"><i class="fas fa-fw fa-tools"></i>Elementos sin serial</a>
-              <a class="dropdown-item" > <i class="fas fa-fw fa-hospital-alt"></i>Bodegas</a>
-              <a class="dropdown-item" > <i class="fas fa-fw fa-chalkboard-teacher"></i>Administraci&oacute;n</a>     
-              <a class="dropdown-item"><i class="fas fa-fw fa-home"></i>Sedes</a>       
+              <a class="dropdown-item" [routerLink]='"Serializados"'><i class="fas fa-fw fa-barcode"></i>Elementos con serial</a>
+              <a class="dropdown-item" [routerLink]='"NoSerializados"'><i class="fas fa-fw fa-tools"></i>Elementos sin serial</a>
+              <a class="dropdown-item" [routerLink]='"Bodegas"'> <i class="fas fa-fw fa-hospital-alt"></i>Bodegas</a>
+              <a class="dropdown-item" [routerLink]='"Administracion"'> <i class="fas fa-fw fa-chalkboard-teacher"></i>Administraci&oacute;n</a>     
+              <a class="dropdown-item" [routerLink]='"Sedes"'><i class="fas fa-fw fa-home"></i>Sedes</a>       
             </div>
           </li>
    
