@@ -16,6 +16,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>WebServicespyRest</Name>
     <RootNamespace>WebServicespyRest</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,13 +27,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Negocio\Seguridad.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Negocio\Usuario.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Modelos\Usuariodto.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Negocio\Utilitario.py">
+    <Compile Include="Negocio\UtilitarioBD.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="servicios.py">
@@ -42,6 +46,10 @@
   <ItemGroup>
     <Folder Include="Modelos\" />
     <Folder Include="Negocio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.ini" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

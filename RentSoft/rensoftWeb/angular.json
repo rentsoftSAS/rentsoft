@@ -32,8 +32,8 @@
               "./src/app/libs/vendor/jquery/jquery.min.js",
               "./src/app/libs/vendor/bootstrap/js/bootstrap.bundle.min.js",
               "./src/app/libs/vendor/jquery-easing/jquery.easing.min.js",
-              "./src/app/libs/vendor/principal/sb-admin.js"
-              
+              "./src/app/libs/vendor/principal/sb-admin.js",
+              "node_modules/crypto-js/crypto-js.js"
 
             ]
           },

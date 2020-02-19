@@ -16,17 +16,17 @@ import { NoSerializadosComponent } from './Inventario/no-serializados/no-seriali
 import { BodegasComponent } from './Inventario/bodegas/bodegas.component';
 import { AdministracionComponent } from './Inventario/administracion/administracion.component';
 import { SedesComponent } from './Inventario/sedes/sedes.component';
-
+import {VerificaAuthGuard} from './guards/verifica-auth.guard'
 const routes: Routes = [{path:'', component: LoginComponent},
-{path:"principal",component:PrincipalComponent,
-children:[{path:'home', component:HomeComponent},{path:'CAlquiler', component:ConsultarAlquilerComponent},
-          {path:'CotAlquiler', component:CotizarAlquilerComponent}, {path:'DesAlquiler', component:DespacharAlquilerComponent},
-          {path:'DevAlquiler', component:DevolverAlquilerComponent}, {path:'LiqAlquiler',component:LiquidarAlquilerComponent},
-          {path:'CCliente', component:ConsultarClienteComponent},{path:'Sucursales', component:SucursalesComponent},
-          {path:'Contactos', component:ContactosComponent},{path:'Serializados', component:SerializadosComponent},
-          {path:'NoSerializados', component:NoSerializadosComponent},{path:'Bodegas', component:BodegasComponent},
-          {path:'Administracion', component:AdministracionComponent}, {path:'Sedes', component:SedesComponent}
-        ], 
+{path:"principal",component:PrincipalComponent, canActivate:[VerificaAuthGuard], canActivateChild :[VerificaAuthGuard],
+      children:[{path:'home', component:HomeComponent},{path:'CAlquiler', component:ConsultarAlquilerComponent},
+                {path:'CotAlquiler', component:CotizarAlquilerComponent}, {path:'DesAlquiler', component:DespacharAlquilerComponent},
+                {path:'DevAlquiler', component:DevolverAlquilerComponent}, {path:'LiqAlquiler',component:LiquidarAlquilerComponent},
+                {path:'CCliente', component:ConsultarClienteComponent},{path:'Sucursales', component:SucursalesComponent},
+                {path:'Contactos', component:ContactosComponent},{path:'Serializados', component:SerializadosComponent},
+                {path:'NoSerializados', component:NoSerializadosComponent},{path:'Bodegas', component:BodegasComponent},
+                {path:'Administracion', component:AdministracionComponent}, {path:'Sedes', component:SedesComponent}
+        ],
 }];
 
 @NgModule({

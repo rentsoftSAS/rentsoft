@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-consultar-cliente',
   templateUrl: './consultar-cliente.component.html',
@@ -10,6 +9,11 @@ export class ConsultarClienteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickboton(){
+   alert("clickboton");
+  
   }
 
 }

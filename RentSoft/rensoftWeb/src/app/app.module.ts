@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {UsuarioService} from './servicios/usuario.service';
+import {UsuarioService} from './servicios/Usuario/usuario.service';
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
 import { ConsultarAlquilerComponent } from './Alquiler/consultar-alquiler/consultar-alquiler.component';
@@ -24,7 +24,7 @@ import { NoSerializadosComponent } from './Inventario/no-serializados/no-seriali
 import { BodegasComponent } from './Inventario/bodegas/bodegas.component';
 import { AdministracionComponent } from './Inventario/administracion/administracion.component';
 import { SedesComponent } from './Inventario/sedes/sedes.component'
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +54,8 @@ import { SedesComponent } from './Inventario/sedes/sedes.component'
  
   ],
   providers: [
-    UsuarioService
+    UsuarioService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
