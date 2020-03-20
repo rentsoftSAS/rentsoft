@@ -4,7 +4,7 @@ import {RouterModule, Route} from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -25,6 +25,7 @@ import { BodegasComponent } from './Inventario/bodegas/bodegas.component';
 import { AdministracionComponent } from './Inventario/administracion/administracion.component';
 import { SedesComponent } from './Inventario/sedes/sedes.component'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CrearComponent } from './Clientes/formularios/crear/crear.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,14 +44,16 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NoSerializadosComponent,
     BodegasComponent,
     AdministracionComponent,
-    SedesComponent
+    SedesComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
  
   ],
   providers: [

@@ -13,8 +13,6 @@ app.config['SECRET_KEY'] = 'R3nts0ft'
 CORS(app)
 
 
-
-
 @app.route("/usuarios",methods = ['POST'])
 def usuarios():
     credenciales = request.get_json(force=True)

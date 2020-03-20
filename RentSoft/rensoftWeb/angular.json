@@ -34,7 +34,6 @@
               "./src/app/libs/vendor/jquery-easing/jquery.easing.min.js",
               "./src/app/libs/vendor/principal/sb-admin.js",
               "node_modules/crypto-js/crypto-js.js"
-
             ]
           },
           "configurations": {
@@ -132,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "rensoftWeb"
+  "defaultProject": "rensoftWeb",
+  "cli": {
+    "analytics": "70c15d6e-3f9e-46b7-a25a-ab1aba67c53b"
+  }
 }
