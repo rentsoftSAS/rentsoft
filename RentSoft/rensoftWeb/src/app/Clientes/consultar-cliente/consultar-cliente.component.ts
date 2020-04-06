@@ -5,15 +5,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultar-cliente.component.css']
 })
 export class ConsultarClienteComponent implements OnInit {
-
+  visible:boolean = false
   constructor() { }
 
   ngOnInit() {
+   
   }
 
-  clickboton(){
-   alert("clickboton");
-  
-  }
+CrearClienteClick(){
+  this.visible = true
+}
+RegresarCrearClienteClick(){
+  this.visible = false
+}
 
 }

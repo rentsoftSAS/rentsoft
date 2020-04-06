@@ -26,6 +26,7 @@ import { AdministracionComponent } from './Inventario/administracion/administrac
 import { SedesComponent } from './Inventario/sedes/sedes.component'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CrearComponent } from './Clientes/formularios/crear/crear.component';
+import { NumericoDirective } from './Directivas/numerico.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { CrearComponent } from './Clientes/formularios/crear/crear.component';
     BodegasComponent,
     AdministracionComponent,
     SedesComponent,
-    CrearComponent
+    CrearComponent,
+    NumericoDirective
   ],
   imports: [
     BrowserModule,

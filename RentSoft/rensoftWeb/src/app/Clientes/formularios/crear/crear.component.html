@@ -1,11 +1,48 @@
 
     <form (submit)="guardar()" [formGroup]="formCrearCliente" >
+     
+        <h4 style="color: #093d71;">Crear Cliente</h4>     
         <div class="form-group" >
-            <div class="form-label-group">
-              <input type="text" formControlName="nbusuario" class="form-control"  required="required" autofocus="autofocus" autocomplete="off">
-              <label for="tbxUsuario">Nombre Usuario</label>   
+          <div class="form-label-group" style="margin-top:10px;">
+           <select class="form-control" formControlName="TipoDocumento"(change)="ddlTipodocumentoCg()" >
+             <option class="form-control" value="0">Seleccione el tipo de documento</option>
+             <option  class="form-control" *ngFor="let item of ListatiposDocumento" value={{item.id}} >
+               {{item.Tipodocumento}}
+             </option>             
+           </select>
+           <small  *ngIf="formCrearCliente.get('TipoDocumento').touched && formCrearCliente.get('TipoDocumento').invalid" class="text-danger">Seleccione el tipo de documento</small> 
+          </div>
+          <div class="form-label-group" style="margin-top:10px;">              
+            <input type="text" appNumerico="'true'" maxlength="12" formControlName="NumeroDocumento" class="form-control" minlength="5"  required="required" autofocus="autofocus" autocomplete="off">
+            <label for="tbxUsuario">{{lbltipodocumento}}</label>   
+            <small id="passwordHelp" *ngIf="formCrearCliente.get('NumeroDocumento').touched && formCrearCliente.get('NumeroDocumento').hasError('required')" class="text-danger">El n&uacute;mero de documento es obligatorio</small>  
+             <small id="passwordHelp" *ngIf="formCrearCliente.get('NumeroDocumento').touched && formCrearCliente.get('NumeroDocumento').hasError('minlength')" class="text-danger">El n&uacute;mero de documento debe tener mas de 4 digitos</small>   
+  
+          </div>
+            <div class="form-label-group" style="margin-top:10px;">              
+              <input type="text" formControlName="NombreCliente" class="form-control"  required="required" autofocus="autofocus" autocomplete="off">
+              <label for="tbxUsuario">{{lblNombreCliente}}</label>  
+              <small id="passwordHelp" *ngIf="formCrearCliente.get('NombreCliente').touched && formCrearCliente.get('NombreCliente').hasError('required')" class="text-danger">El nombre es obligatorio</small> 
+            </div>
+            <div class="form-label-group" style="margin-top:10px;" *ngIf="!snEmpresa">
+              <input type="text"  class="form-control" formControlName="ApellidoCliente" required="required" autofocus="autofocus" autocomplete="off">
+              <small id="passwordHelp" *ngIf="formCrearCliente.get('ApellidoCliente').touched && formCrearCliente.get('ApellidoCliente').hasError('required')" class="text-danger">El Apellido es obligatorio</small> 
+              <label>Apellido Cliente</label>   
+            </div>
+            <div class="form-label-group" style="margin-top:10px;">
+              <input type="text"  class="form-control" formControlName="DireccionCliente" required="required" autofocus="autofocus" autocomplete="off">
+              <small id="passwordHelp" *ngIf="formCrearCliente.get('DireccionCliente').touched && formCrearCliente.get('DireccionCliente').hasError('required')" class="text-danger">El Direccion es obligatoria</small> 
+              <label>Direcci&oacute;n Cliente</label>   
+            </div>
+            <div class="form-label-group" style="margin-top:10px;">
+              <input type="text"  class="form-control" formControlName="CorreoCliente"  autofocus="autofocus" autocomplete="off">
+              <small id="passwordHelp" *ngIf="formCrearCliente.get('CorreoCliente').touched && formCrearCliente.get('CorreoCliente').invalid" class="text-danger">El correo ingresado no es válido</small> 
+              <label>Correo</label>   
             </div>
           </div>
-          <input type="submit" class="btn btn-success" title="Crear" value="Crear" />
-    </form>
- 
+          <input type="submit" class="btn btn-success" title="Guardar" value="Crear" />   
+          <button class="btn btn-primary float-right">
+            <i class="far fa-address-book" *ngIf="snGuardado"></i>
+          Agregar contacto</button>     
+        </form>
+        

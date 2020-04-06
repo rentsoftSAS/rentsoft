@@ -1,3 +1,24 @@
-<p>consultar-cliente! works</p>
-<button (click)="clickboton()">Hola dame click</button>
-<app-crear></app-crear>
+<div id="dvCrearCliente" *ngIf="!visible">
+<button class="btn btn-primary"   style="background-color: 093d71 ;" (click)="CrearClienteClick()">  
+<i class="fas fa-user-plus"></i>
+   Crear Cliente</button>
+<div class="row" style="margin-top: 20px;" >
+    <div class="col-md-6">   
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Busqueda" aria-label="Search" aria-describedby="basic-addon2" >
+       </div>
+    </div>
+</div>
+</div>
+
+
+<div class="row" *ngIf="visible">
+    <div class="col-md-12">
+    <button class="btn btn-light"   (click)="RegresarCrearClienteClick()">
+        <i class="fas fa-long-arrow-alt-left"></i>
+        Regresar</button>
+    </div>
+    <div class="col-md-6" style="margin-top: 20px;">
+        <app-crear-cliente></app-crear-cliente>
+    </div>
+</div>

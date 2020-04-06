@@ -1,5 +1,6 @@
 from flask import Flask, request
 from Negocio.Usuario import Usuario
+from Negocio.Varios import Varios
 from flask_cors import CORS
 import json
 import jwt
@@ -54,6 +55,11 @@ def login():
 @app.route("/alquileres",methods = ['POST'])
 def alquileres():
     filtro = credenciales["filtro"]
+
+@app.route("/GetTiposDocumento",methods = ['GET'])
+def GetTiposDocumento():
+    respuesta = Varios.ObtenerTiposDocumento()
+    return respuesta
 
 
 if __name__ == "__main__":
