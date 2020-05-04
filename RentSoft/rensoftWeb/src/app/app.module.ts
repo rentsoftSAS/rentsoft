@@ -27,7 +27,14 @@ import { SedesComponent } from './Inventario/sedes/sedes.component'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CrearComponent } from './Clientes/formularios/crear/crear.component';
 import { NumericoDirective } from './Directivas/numerico.directive';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PopupComponent } from './Modal/popup/popup.component';
+import { MensajeInformativoComponent } from './Modal/mensaje-informativo/mensaje-informativo.component';
+import { MsgErrorComponent } from './Modal/msg-error/msg-error.component';
+
 @NgModule({
+
+  entryComponents:[PopupComponent,CrearComponent,MensajeInformativoComponent,MsgErrorComponent],
   declarations: [
     AppComponent,
     LoginComponent,
@@ -47,7 +54,11 @@ import { NumericoDirective } from './Directivas/numerico.directive';
     AdministracionComponent,
     SedesComponent,
     CrearComponent,
-    NumericoDirective
+    NumericoDirective,
+    PopupComponent,
+    MensajeInformativoComponent,
+    MsgErrorComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -55,7 +66,8 @@ import { NumericoDirective } from './Directivas/numerico.directive';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
  
   ],
   providers: [

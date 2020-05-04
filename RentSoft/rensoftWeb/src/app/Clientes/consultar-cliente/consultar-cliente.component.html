@@ -1,7 +1,15 @@
 <div id="dvCrearCliente" *ngIf="!visible">
-<button class="btn btn-primary"   style="background-color: 093d71 ;" (click)="CrearClienteClick()">  
+<button class="btn btn-primary"    (click)="CrearClienteClick()">  
 <i class="fas fa-user-plus"></i>
    Crear Cliente</button>
+
+  <button class="btn btn-primary"   style="background-color: #093d71 ;" (click)="CrearClienteClickpopup()">  
+    <i class="fas fa-user-plus"></i>
+       Crear Cliente popup</button> 
+
+       <button class="btn btn-primary"   style="background-color: #093d71 ;" (click)="mensajeInformativo()">  
+        <i class="fas fa-user-plus"></i>
+           mensaje informativo</button>   
 <div class="row" style="margin-top: 20px;" >
     <div class="col-md-6">   
     <div class="input-group">
