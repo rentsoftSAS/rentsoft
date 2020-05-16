@@ -38,7 +38,11 @@ fk_alquiler_estadoAlquiler
   alter table cliente add constraint fk_cliente_tipoDocumento  foreign key (idTipoDocumento) references tipodocumento(id);
   alter table cliente add constraint  fk_usuario_crea_cliente foreign key (IdUsuarioCrea) references usuario(id);
   alter table cliente add constraint  fk_usuario_modifica_cliente foreign key (IdUsuarioModifica) references usuario(id) ;
-   /*tabla elemento*/
+  /*tabla contacto*/
+ alter table  contacto add constraint fk_contacto_cliente foreign key (id_cliente) references cliente(id);
+    
+    
+   /*tabla elemento*/ 
   alter table elemento add constraint fk_elemento_estado_elemento foreign key (IdEstadoElemento) references estadoselemento(id);
   alter table elemento add constraint fk_elemento_anexo foreign key (IdAnexo) references anexos(id);
   alter table elemento add constraint fk_elemento_facturacion foreign key (IdTipoFacturacion) references tiposfacturacion(id);

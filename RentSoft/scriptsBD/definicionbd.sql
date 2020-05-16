@@ -249,3 +249,20 @@ Activo boolean,
 	FechaModificacion datetime,
 	primary key (id)
     );
+    
+    
+  create table if not exists Contacto(
+    id integer not null auto_increment,
+	Nombre varchar(50),
+    Telefono varchar(20),
+    Email varchar(50),
+	id_cliente integer ,	
+    descripcion varchar(1000),
+    Activo boolean,
+	IdUsuarioCrea integer,
+	FechaCreacion datetime,
+	IdUsuarioModifica integer,
+	FechaModificacion datetime,
+	primary key (id)
+    );
+    
