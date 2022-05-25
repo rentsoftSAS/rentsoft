@@ -15,7 +15,7 @@ mysql-connector-python==8.0.17
 protobuf==3.9.2
 pycparser==2.19
 pycryptodome==3.9.4
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.4.3
 setuptools==40.8.0
 six==1.13.0
